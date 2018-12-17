@@ -1,0 +1,92 @@
+{% extends 'base_layout.html' %}
+
+{% block content %} 
+
+<br>
+<!-- Title -->
+<h1 class="text-center">Material & Fabrication</h1>
+<body class="container" >
+	<div class="form-grouup">
+<!-- Form Materials-->
+			<form>
+					<div class="row">
+						<div class="col-sm-4">
+							<h4>Choose Material:</h4>
+							<select id="mat" onchange="calculateMat()">
+								{% for material in material_list %}
+								<option value="0.00">Select</option>
+						        <option value="{{ material.price }}">{{ material.name }}</option>
+						        <{% endfor %}
+						     
+					        </select>
+					    </div>
+<!-- Square ft -->  
+					    <div class="col-sm-4" >
+					    	<h4>What is the square footage:</h4>
+					        <input type="number" id="l" onkeyup="show()">
+					        <input type="number" id="w" onkeyup="show()">
+				        </div>
+				        <div class="col-sm-4">
+				        	<h4>Material X Feet:</h4>
+				        	<h5 id="total"></h5>
+				        </div>
+					</div>	
+			<br>
+			<br>
+					<div class="row">
+<!-- Edge -->
+						<div class="col-sm-4">
+						<h4>Choose Edge:</h4>
+							<select id="ed" onchange="calculateEd()">
+						        <option value="0">Select a Edge:</option>
+						        <option value="2.00">90"($2)</option>
+						        <option value="4.00">Rounded($4)</option>
+					        </select>
+							</div>
+							<div class="col-sm-4">
+	<!-- Linear footage -->
+						    	<h4>How many linear feet:</h4>
+						        <input type="text" id="lin" onkeyup="show2()">
+					        </div>
+					        <div class="col-sm-4">
+					        	<h4>Edge X Linear:</h4>
+					        	<h5 id="totEdge"></h5>
+					        </div>
+						</div>
+			<br>
+					<div class="row">
+<!-- Install input -->
+						<h4>Select installation price:</h4>
+								<div class="col-sm-4">
+									<select id="install" onchange="calculate()">
+										<option value="0">Select Installation:</option>
+										<option value="15.00">$15.00/sqft</option>
+										<option value="20.00">$20.00/sqft</option>
+										<option value="25.00">$25.00/sqft</option>
+									</select>
+								</div>
+								<div class="col-sm-4">
+									<h5 id="total">Square footage:</h5>
+								</div>
+						</div>
+			<br>
+<!-- Results -->
+					<div class="row" style="background: #F0EDED;">
+						<div class="col-sm-4">
+							<h3><button onclick="calculate()" type="button" class="btn btn-primary">Calculate</button></h3>
+						</div>
+						<div class="col-sm-4">
+							<h3 id="answer2">Total feet:</h3>
+						</div>
+
+						<div class="col-sm-4">
+							<h3 id="answer"></h3>
+						</div>
+					</div>
+					{% for material in material_list %}
+					<h1>{{ material.name }} - {{ material.price }}</h1><p></p>
+					{% endfor %}	
+			</form>
+	</div>
+	<!--<script type="text/javascript" src="fireBase.js"></script> -->
+		{% endblock %}
