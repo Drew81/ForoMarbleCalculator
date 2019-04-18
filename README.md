@@ -1,5 +1,5 @@
 # ForoMarbleCalculator
-![Alt text](foro_img1.jpg?raw=true "Optional Title")
+<img width="937" alt="foro_img1" src="https://user-images.githubusercontent.com/26306948/56368943-6b1d1e00-61c6-11e9-9754-7f8de153749b.png">
 # Prerequisites:
 1. Python 3
 2. Virtual Enviornment
