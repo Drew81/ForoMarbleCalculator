@@ -1,5 +1,6 @@
 # ForoMarbleCalculator
-<img width="937" alt="foro_img1" src="https://user-images.githubusercontent.com/26306948/56368943-6b1d1e00-61c6-11e9-9754-7f8de153749b.png">
+<img width="785" alt="foro_img6" src="https://user-images.githubusercontent.com/26306948/56370408-2777e380-61c9-11e9-8faa-b2d548b1db58.png">
+<img width="951" alt="foro_img5" src="https://user-images.githubusercontent.com/26306948/56370417-2ba40100-61c9-11e9-90f6-0be6d8a48bb1.png">
 # Prerequisites:
 1. Python 3
 2. Virtual Enviornment
